@@ -13,6 +13,8 @@
     box-sizing: border-box;
 }
 
+/* Typographie */
+
 h1 {
     font-family: "Rock Salt", cursive;
     font-size: 2rem;
@@ -37,6 +39,17 @@ p {
     color: var(--antracite);
 }
 
+/* Containers */
+
 body {
-    image-background=""
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: red;
+    border-radius: 1rem;
+    width: 80%;
 }
