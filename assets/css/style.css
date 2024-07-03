@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap');
+
+:root {
+    --red: #AD0000;
+    --brun: #3A1D02;
+    --antracite: #414040;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Rock Salt", cursive;
+    font-size: 3rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--red);
+}
+
+h2 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--antracite);
+}
+
+p {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--antracite);
+}
