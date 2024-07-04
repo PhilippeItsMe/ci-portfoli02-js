@@ -64,6 +64,7 @@ body {
     background-image: url('../images/concertdesktop.webp');
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 main {
@@ -120,6 +121,18 @@ button {
     font-size: 3rem;
 }
 
+button img {
+    width: 4rem;
+}
+
+/* Questions section */
+
+#guitarhero {
+    position: absolute;
+    bottom: 8rem;
+    right: 15rem;
+}
+
 /* Answers section */
 
 #answersrow p {
@@ -128,10 +141,7 @@ button {
     margin-top: 0.5rem;
     border-radius: 0.5rem;
     color: var(--white);
-
 }
-
-
 
 /* Results section */
 
