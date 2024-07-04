@@ -16,35 +16,32 @@
 
 <body>
     <main>
+        <h1>Are you a real guitar freak ?</h1>
         <section id="questions">
-            <h1>Are you a real guitar freak ?</h1>
-            <h2>Question 1 / 6</h2>
-            <p>Which guitar technic made Eddie Van Halen famous ?</p>
-            <div id="answers">
+            <h2>Question 1 / 6 : Which guitar technic made Eddie Van Halen famous ?</h2>
+            <div id="answersrow">
                 <button id="answer1">Power cords</button>
                 <button id="answer2">Tapping</button>
                 <button id="answer3">Legatos</button>
             </div>
-            <button id="submit">Hell yeah !</button>
         </section>
         <section id="results">
-            <h2>You are definitly a </h2>
-            <div>
-                <div> </div>
+            <h2>You are definitly a <span id="inred">Rock Star !</span></h2>
+            <div id="resultsrow">
+                <img id="resultsillustration" src="assets/images/star.webp" alt="Rock star picture">
                 <div>
-                    <p>Rules</p>
-                    <p>81-100% correct : You are a rock star !</p>
-                    <p>61-80% correct : You are getting old !</p>
-                    <p>0-60% correct : You time is out !</p>
+                    <p style="font-weight: 500; text-transform: uppercase;">Rules</p>
+                    <p id="first">81-100% correct : You are a rock star !</p>
+                    <p id="second">61-80% correct : You are getting old !</p>
+                    <p id="third">0-60% correct : Your time is out !</p>
                 </div>
                 <div> </div>
             </div>
-            <button id="next"></button>
         </section>
     </main>
     <footer>
-        <p>Good answer : </p>
-        <p>Bad answer : </p>
+        <div>Good answer : 0</div>
+        <div>Bad answer : 0</div>
     </footer>
 
 
