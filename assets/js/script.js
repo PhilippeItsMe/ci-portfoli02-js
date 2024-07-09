@@ -1,15 +1,44 @@
-// To list all questions in an array
+// Creating an array of questions (objects)
 
-const questions = [
-    ["Question 1/6 : What innovative technique is Eddie Van Halen famous for ?", "Slide guitar", "Tapping", "Fingerpicking", "Tapping", "q2"],
-    ["Question 2/6 : What is Jimmy Page best known band?", "Led Zepplin", "The Who", "Kiss", "Led Zepplin", "q3"],
-    ["Question 3/6 : For what is Steve Vai renowned in the 80s ?", "Slide Guitar", "Floyd Rose Use", "Blues", "Floyd Rose Use", "q4"],
-    ["Question 4/6 : How did Jimmy Hendrix played sometime his guitar ?", "With His Feet", "With His Elbow", "With His Teeth", "With His Teeth", "q5"],
-    ["Question 5/6 : What is Tony Iommi, the guitarist of Black Sabbath, famous for?", "His Aircut", "Distortion", "Heavy Riffs", "Heavy Riffs", "q6"],
-    ["Question 6/6 : What musical genre is Yngwie Malmsteen credited with ?", "Neoclassical Metal", "Blues", "Rock", "Neoclassical Metal", "over"]
+const questions = [{ //Question 1
+        question: "Question 1/6 : What innovative technique is Eddie Van Halen famous for ?",
+        answers: ["Slide guitar", "Tapping", "Fingerpicking"],
+        correctAnswer: 1 //Index of the correct answer
+    },
+    { //Question 2
+        question: "Question 2/6 : What is Jimmy Page best known band?",
+        answers: ["Led Zepplin", "The Who", "Kiss"],
+        correctAnswer: 0 //Index of the correct answer
+    },
+    { //Question 3
+        question: "Question 3/6 : For what is Steve Vai renowned in the 80s ?",
+        answers: ["Slide Guitar", "Floyd Rose Use", "Blues"],
+        correctAnswer: 1 //Index of the correct answer
+    },
+    { //Question 4
+        question: "Question 4/6 : How did Jimmy Hendrix played sometime his guitar ?",
+        answers: ["Slide guitar", "Tapping", "Fingerpicking"],
+        correctAnswer: 1 //Index of the correct answer
+    },
+    { //Question 5
+        question: "Question 5/6 : What is Tony Iommi, the guitarist of Black Sabbath, famous for?",
+        answers: ["His Aircut", "Distortion", "Heavy Riffs"],
+        correctAnswer: 2 //Index of the correct answer
+    },
+    { //Question 6
+        question: "Question 6/6 : What musical genre is Yngwie Malmsteen credited with ?",
+        answers: ["Neoclassical Metal", "Blues", "Rock"],
+        correctAnswer: 0 //Index of the correct answer
+    }
 ];
 
-// To react to the mouse going over the answer buttons
+// Setting start question and scores
+
+let currentQuestionIndex = 0;
+let correctAnswer = 0;
+let incorrectAnswer = 0;
+
+// Setting a mouse button hover effect
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -27,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     getAnswer();
 });
 
-// To capture the user answer when his mouse is clicking on an answer button
+// Capturing the user answer
 
 function getAnswer() {
 
@@ -36,33 +65,29 @@ function getAnswer() {
     for (let i = 0; i < buttons.length; i++) {
         let button = buttons[i];
         button.addEventListener('click', () => {
-            let answer = this.textContent;
+            let answer = button.nextElementSibling.textContent; //To catch the p below the button
             checkAnswer(answer);
         })
     };
 };
 
-//To check if the answer is correct
+//To check if the answer is correct and increment the score
 
-function checkAnswer() {
+function checkAnswer(answer) {
+    let question = questions[currentQuestionIndex];
+    let correctAnswerIndex = question.correctAnswer;
+    let correctAnswerText = question.answers[correctAnswerIndex];
 
-    let questionDomText = document.getElementById('questiontext');
-
-    for (let i = 0; i < questions.length; i++) {
-        let question = questions[i];
-        let questionText = question[0];
-
-
-    };
-};
-
-function incrementGoodAnswer() {
-
-};
-
-function incrementBadAnswer() {
-
-};
+    if (answer === correctAnswerText) {
+        correctAnswer++;
+        let correctContent = document.getElementById("goodanswer");
+        correctContent.textContent = "Good answer : " + correctAnswer;
+    } else {
+        incorrectAnswer++;
+        let incorrectContent = document.getElementById("badanswer");
+        incorrectContent.textContent = "Bad answer : " + incorrectAnswer;
+    }
+}
 
 function updateYouAre() {
 
