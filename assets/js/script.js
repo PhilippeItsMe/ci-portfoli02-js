@@ -97,6 +97,6 @@ function updateYouAre() {
 
 };
 
-function displayQuestion() {
+function displayNextQuestion() {
 
 };
