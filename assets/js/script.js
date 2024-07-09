@@ -87,6 +87,10 @@ function checkAnswer(answer) {
         let incorrectContent = document.getElementById("badanswer");
         incorrectContent.textContent = "Bad answer : " + incorrectAnswer;
     }
+
+    currentQuestionIndex++;
+    updateYouAre(correctAnswer, incorrectAnswer);
+    displayQuestion(currentQuestionIndex);
 }
 
 function updateYouAre() {
