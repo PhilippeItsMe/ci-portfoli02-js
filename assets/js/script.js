@@ -6,9 +6,33 @@ let q5 = ["Question 5/6 : What is Tony Iommi, the guitarist of Black Sabbath, fa
 let q6 = ["Question 6/6 : What musical genre is Yngwie Malmsteen credited with ?", "Neoclassical Metal", "Blues", "Rock", "Neoclassical Metal", "q7"];
 let q7 = ["You know now if you fully lived the 80' and if you are a rock dude!", "Game Over", "Game Over", "Game Over", "Game Over", "q7"];
 
-function displayQuestion() {
+// To watch and react to the mouse going over the three answer buttons
 
-};
+document.addEventListener("DOMContentLoaded", function () {
+
+    let buttons = document.getElementsByTagName('button');
+
+    for (let i = 0; i < buttons.length; i++) {
+        let button = buttons[i];
+        button.addEventListener('mouseover', () => {
+            button.style.background = "#FBB03B"
+        });
+        button.addEventListener('mouseout', () => {
+            button.style.background = "white"
+        });
+    }
+});
+
+
+
+
+
+
+function answerAnimation() {
+    let buttonStyle = windows.getComputedStyle("button");
+    console.log(buttonStyle);
+}
+
 
 function getAnswer() {
 
@@ -27,5 +51,9 @@ function incrementBadAnswer() {
 };
 
 function updateYouAre() {
+
+};
+
+function displayQuestion() {
 
 };
