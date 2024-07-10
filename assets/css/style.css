@@ -64,15 +64,16 @@ body {
     background-image: url('../images/concertdesktop.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
 }
 
 main {
     background-color: var(--white);
     border-radius: 1rem;
     width: 70%;
+    max-width: 1000px;
     box-shadow: 10px 10px 10px #bcb8b8;
     padding: 2rem;
+    position: relative;
 }
 
 #answersrow {
@@ -129,8 +130,8 @@ button img {
 
 #guitarhero {
     position: absolute;
-    bottom: 10rem;
-    right: 15rem;
+    bottom: 2rem;
+    right: 2rem;
 }
 
 /* Answers section */
@@ -149,4 +150,86 @@ button img {
     height: 6rem;
     margin-right: 2rem;
     border-radius: 0.5rem;
+}
+
+/* Media Query (Responsivness) */
+
+@media screen and (max-width: 1450px) {
+    #resultsrow {
+        width: 60%;
+    }
+
+    #guitarhero {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 1205px) {
+    h1 {
+        font-size: 2.4rem;
+        line-height: 4rem;
+    }
+
+    #resultsrow {
+        width: 70%;
+    }
+
+    #guitarhero {
+        height: 200px;
+        width: 200px;
+        bottom: 12rem;
+        right: 10rem;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    #answersrow {
+        width: 90%;
+        margin: auto;
+    }
+
+    #resultsrow {
+        width: 90%;
+        margin: auto;
+    }
+
+    #guitarhero {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #resultsrow {
+        flex-direction: column;
+    }
+
+    #resultsillustration {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    #answersrow {
+        flex-direction: column;
+    }
+
+    #answersrow p {
+        margin-bottom: 1rem;
+    }
 }
