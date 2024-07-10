@@ -23,6 +23,7 @@ h1 {
     font-weight: 600;
     font-style: italic;
     color: var(--red);
+    line-height: 4rem;
 }
 
 h2 {
@@ -105,9 +106,12 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     gap: 2rem;
-    padding-top: 1rem;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
     color: var(--white);
     font-size: 1.5rem;
+    background-color: var(--antracite);
 }
 
 /* Buttons */
@@ -132,6 +136,8 @@ button img {
     position: absolute;
     bottom: 2rem;
     right: 2rem;
+    height: 23em;
+    width: 23rem;
 }
 
 /* Answers section */
@@ -160,15 +166,14 @@ button img {
     }
 
     #guitarhero {
-        height: 250px;
-        width: 250px;
+        height: 17em;
+        width: 17rem;
     }
 }
 
 @media screen and (max-width: 1205px) {
     h1 {
         font-size: 2.4rem;
-        line-height: 4rem;
     }
 
     #resultsrow {
@@ -176,8 +181,8 @@ button img {
     }
 
     #guitarhero {
-        height: 200px;
-        width: 200px;
+        height: 13.5rem;
+        width: 13.5rem;
         bottom: 12rem;
         right: 10rem;
     }
