@@ -25,13 +25,13 @@ const questions = [{ //Question 1
         illustration: "assets/images/jimmyhendrix.webp"
     },
     { //Question 5
-        question: "Question 6/6 : What musical genre is Yngwie Malmsteen credited with ?",
+        question: "Question 5/6 : What musical genre is Yngwie Malmsteen credited with ?",
         answers: ["Neoclassical Metal", "Blues", "Rock"],
         correctAnswer: 0, //Index of the correct answer
         illustration: "assets/images/yngwiemalmsteen.webp"
     },
     { //Question 6
-        question: "Question 5/6 : What is Tony Iommi, the guitarist of Black Sabbath, famous for?",
+        question: "Question 6/6 : What is Tony Iommi, the guitarist of Black Sabbath, famous for?",
         answers: ["His Aircut", "Distortion", "Heavy Riffs"],
         correctAnswer: 2, //Index of the correct answer
         illustration: "assets/images/tonyiommi.webp"
@@ -182,7 +182,13 @@ function displayNextQuestion(currentQuestionIndex) {
         let title = document.getElementsByTagName("h1")[0];
         title.innerHTML = "Well done !";
         let challenge = document.getElementById("questiontext");
-        challenge.innerHTML = "Your test is over and you know where you stand now !<br>Feel free to reload the page to do the quizz again.";
+        challenge.innerHTML = '<h2 onclick="reload();">Your test is over and you know where you stand now !<br>Feel free to <span style="color:#AD0000; font-weight:500;">click here</span> to reload the page in order to do the quizz again.</h2>';
 
     };
+};
+
+//To reload the page in order to do the quizz again
+
+function reload() {
+    location.reload();
 };
