@@ -89,12 +89,19 @@ function checkAnswer(answer) {
     }
 
     currentQuestionIndex++;
-    updateYouAre(correctAnswer, incorrectAnswer);
+    updateYouAre(correctAnswer, incorrectAnswer, currentQuestionIndex);
     displayQuestion(currentQuestionIndex);
 }
 
-function updateYouAre() {
+function updateYouAre(correctAnswer, incorrectAnswer, currentQuestionIndex) {
+    let ratio = correctAnwer / (currentQuestionIndex + 1);
+    if (ratio > 0.8) {
 
+    } else if (ration <= 0.60) {
+
+    } else {
+
+    }
 };
 
 function displayNextQuestion() {
