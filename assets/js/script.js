@@ -88,10 +88,12 @@ function checkAnswer(answer) {
         correctAnswer++;
         let correctContent = document.getElementById("goodanswer");
         correctContent.textContent = "Good answer : " + correctAnswer;
+        alert(`Well done ! Good answer !`);
     } else {
         incorrectAnswer++;
         let incorrectContent = document.getElementById("badanswer");
         incorrectContent.textContent = "Bad answer : " + incorrectAnswer;
+        alert(`No no no ! Wrong answer !`);
     }
 
     currentQuestionIndex++;
