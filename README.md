@@ -60,6 +60,9 @@ The displayed elements per question are : the question, three answers , the pict
 The hover effect when user go over a answer with their mouse.
  <br><img style="width:300px" src="assets/readme/hovereffect.webp"><br>
 
+The good or wrong answer indication
+<br><img style="width:300px" src="assets/readme/goodwrong.webp"><br>
+
 The score displayed in the footer
 <br><img style="width:300px" src="assets/readme/score.webp"><br>
 
