@@ -1,4 +1,4 @@
-// Creating an array of questions (objects)
+//** Creating an array of questions(objects) */
 
 const questions = [{ //Question 1
         question: "Question 1/6 : What innovative technique is Eddie Van Halen famous for ?",
@@ -38,13 +38,13 @@ const questions = [{ //Question 1
     }
 ];
 
-// Setting start question and scores
+//** Setting start question and scores */ 
 
 let currentQuestionIndex = 0;
 let correctAnswer = 0;
 let incorrectAnswer = 0;
 
-// Setting a mouse button hover effect
+//** Setting a mouse button hover effect */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -53,16 +53,16 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < buttons.length; i++) {
         let button = buttons[i];
         button.addEventListener('mouseover', () => {
-            button.style.background = "#FBB03B"
+            button.style.background = "#FBB03B";
         });
         button.addEventListener('mouseout', () => {
-            button.style.background = "white"
+            button.style.background = "white";
         });
     }
     getAnswer();
 });
 
-// Capturing the user answer
+//** Capturing the user answer */
 
 function getAnswer() {
 
@@ -73,11 +73,11 @@ function getAnswer() {
         button.addEventListener('click', () => {
             let answer = button.nextElementSibling.textContent; //To catch the p below the button
             checkAnswer(answer);
-        })
-    };
-};
+        });
+    }
+}
 
-//To check if the answer is correct and increment the score
+//** To check if the answer is correct and increment the score */
 
 function checkAnswer(answer) {
     let question = questions[currentQuestionIndex];
@@ -88,12 +88,15 @@ function checkAnswer(answer) {
         correctAnswer++;
         let correctContent = document.getElementById("goodanswer");
         correctContent.textContent = "Good answer : " + correctAnswer;
-        alert(`Well done ! Good answer !`);
+        let reply = document.getElementById("reply");
+        reply.innerHTML = '<p class="ingreen">Well done ! Good answer.</p>';
+
     } else {
         incorrectAnswer++;
         let incorrectContent = document.getElementById("badanswer");
         incorrectContent.textContent = "Bad answer : " + incorrectAnswer;
-        alert(`No no no ! Wrong answer !`);
+        let reply = document.getElementById("reply");
+        reply.innerHTML = '<p class="inred">Oups ! Wrong answer.</p>';
     }
 
     currentQuestionIndex++;
@@ -101,7 +104,7 @@ function checkAnswer(answer) {
     displayNextQuestion(currentQuestionIndex);
 }
 
-//To udpate the result box with the current pourcentage of correct answers of the user
+//** To udpate the result box with the current pourcentage of correct answers of the user */
 
 function updateYouAre(correctAnswer, currentQuestionIndex) {
     let pourcentage = correctAnswer / (currentQuestionIndex) * 100;
@@ -122,9 +125,9 @@ function updateYouAre(correctAnswer, currentQuestionIndex) {
         thirdLine.style.fontWeight = "400";
 
         let illustration = document.getElementById("resultsillustration");
-        illustration.setAttribute("src", "assets/images/star.webp")
+        illustration.setAttribute("src", "assets/images/star.webp");
 
-        let level = document.getElementById("inred");
+        let level = document.getElementById("inredfat");
         level.textContent = "Rock Star";
 
 
@@ -140,9 +143,9 @@ function updateYouAre(correctAnswer, currentQuestionIndex) {
         thirdLine.style.fontWeight = "500";
 
         let illustration = document.getElementById("resultsillustration");
-        illustration.setAttribute("src", "assets/images/timeout.webp")
+        illustration.setAttribute("src", "assets/images/timeout.webp");
 
-        let level = document.getElementById("inred");
+        let level = document.getElementById("inredfat");
         level.textContent = "Waanebe";
 
     } else {
@@ -157,14 +160,14 @@ function updateYouAre(correctAnswer, currentQuestionIndex) {
         thirdLine.style.fontWeight = "400";
 
         let illustration = document.getElementById("resultsillustration");
-        illustration.setAttribute("src", "assets/images/old.webp")
+        illustration.setAttribute("src", "assets/images/old.webp");
 
-        let level = document.getElementById("inred");
+        let level = document.getElementById("inredfat");
         level.textContent = "Cool Person With Memory Issues";
     }
-};
+}
 
-//To display the next question
+//** To display the next question */
 
 function displayNextQuestion(currentQuestionIndex) {
 
@@ -184,13 +187,12 @@ function displayNextQuestion(currentQuestionIndex) {
         let title = document.getElementsByTagName("h1")[0];
         title.innerHTML = "Well done !";
         let challenge = document.getElementById("questiontext");
-        challenge.innerHTML = '<h2 onclick="reload();">Your test is over and you know where you stand now !<br>Feel free to <span style="color:#AD0000; font-weight:500;">click here</span> to reload the page in order to do the quizz again.</h2>';
+        challenge.innerHTML = '<h2 onclick="reload();">Your test is over and you know where you stand now !<br>Feel free to <span id="clickhere">click here</span> to reload the page in order to do the quizz again.</h2>';
+    }
+}
 
-    };
-};
-
-//To reload the page in order to do the quizz again
+//** To reload the page in order to do the quizz again */
 
 function reload() {
     location.reload();
-};
+}

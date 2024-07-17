@@ -7,7 +7,7 @@
 
 <a style="text-decoration:underline;" target="_blank" href="https://philippeitsme.github.io/ci-portfoli02-js/">View the LIVE project here</a>
 
-<img src="assets/readme/MokeUp.webp">
+<img src="assets/readme/mokeup.webp">
 
 ## USERSTORY (background)
 
@@ -74,8 +74,8 @@ The classification of the user related to his score.
 ## DESIGN & LANGUAGES
 
 ### Colorimetrie
-Primary colors : red #AD0000; and yellow #FBB03B<br>
-Secondary colors : antracite #414040 and white #ffffff<br>
+Primary colors : red #AD0000 and yellow #FBB03B<br>
+Secondary colors : antracite #414040, white #ffffff and green #195e19<br>
 
 ### Typographie
 Titles : Rock Salt (for the rock 'n' roll mood)<br>

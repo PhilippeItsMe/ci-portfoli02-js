@@ -13,6 +13,7 @@
     --yellow: #FBB03B;
     --antracite: #414040;
     --white: #ffffff;
+    --green: #195e19;
 }
 
 /* Typographie */
@@ -44,8 +45,22 @@ p {
     color: var(--antracite);
 }
 
-#inred {
+.inred {
     color: var(--red);
+    font-weight: 500;
+    padding-top: 0.5rem;
+}
+
+#inredfat {
+    color: var(--red);
+    font-weight: 600;
+    padding-top: 0.5rem;
+}
+
+.ingreen {
+    color: var(--green);
+    font-weight: 500;
+    padding-top: 0.5rem;
 }
 
 #first {
@@ -74,6 +89,7 @@ main {
     max-width: 1000px;
     box-shadow: 10px 10px 10px #bcb8b8;
     padding: 2rem;
+    margin-top: 1rem;
     position: relative;
 }
 
@@ -124,6 +140,7 @@ button {
     background-color: var(--white);
     font-weight: 400;
     font-size: 3rem;
+    cursor: pointer;
 }
 
 button img {
@@ -157,6 +174,18 @@ button img {
     margin-right: 2rem;
     border-radius: 0.5rem;
 }
+
+#uppercase {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#clickhere {
+    color: var(--red);
+    font-weight: 500;
+    cursor: pointer;
+}
+
 
 /* Media Query (Responsivness) */
 
@@ -243,4 +272,23 @@ button img {
         align-items: center;
         gap: 0;
     }
+}
+
+@media screen and (max-width: 510px) {
+    main {
+        width: 95%;
+    }
+
+    #resultsrow {
+        display: flex;
+        width: 100%;
+    }
+
+    #resultsillustration {
+        height: 5rem;
+        width: 5rem;
+    }
+
+
+
 }
