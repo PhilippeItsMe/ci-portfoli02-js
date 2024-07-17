@@ -109,6 +109,9 @@ W3 Validator output :
     <img style="width:350px" src="assets/readme/cssvalidator.webp"><br>
 </ul>
 
+Jshint.com : ✅ No critical mistakes<br>
+<img style="width:350px" src="assets/readme/jshint.webp">
+
 Userstory testing : 
 <ul>
     <li>Is it fun ? : ✅</li>
