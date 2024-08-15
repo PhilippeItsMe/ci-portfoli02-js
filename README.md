@@ -133,6 +133,9 @@ No major issues on the HTML & CSS code.
 ### JAVASCRIPT
 Many synthax issues solved by reading again again and again the code in order to find the small mistakes.
 
+Code sending errors the the console at the end of the game while clicking on answer buttone still present even if the game was over, just hidd
+the answer button to avoir this issue.
+
 ### PERFORMANCE
 Had to increase the guitar pictures resolution, who was to low.
 
