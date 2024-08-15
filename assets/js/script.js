@@ -89,6 +89,17 @@ function checkAnswer(answer) {
         let reply = document.getElementById("reply");
         reply.innerHTML = '<p class="inred">Oups ! Wrong answer.</p>';
     }
+    // To check if the answer is correct and increment the score
+    if (currentQuestionIndex == 5) {
+        // To swith off all button in ordre to avoir consol error message
+        let row = document.getElementById('answersrow');
+        let reply = document.getElementById("reply");
+        let guitarhero = document.getElementById("guitarhero");
+        row.style.visibility = "hidden";
+        //reply.style.visibility = "hidden";
+        guitarhero.style.visibility = "hidden";
+    }
+
     currentQuestionIndex++;
     updateYouAre(correctAnswer, currentQuestionIndex);
     displayNextQuestion(currentQuestionIndex);
